@@ -19,6 +19,12 @@ After setting up the docker environments, follow the detailed instructions in th
 
 To train models with the provided code: We will upload the sound files that is used at here later cause the file size is too big.
 
+## Machine used to train the model 
+
+GPU: NVIDIA GeForce RTX 4090 - 24GB VRAM
+CPU: Intel(R) Core(TM) i9-14900F
+RAM: 64 GB
+
 
 
 
