@@ -1,7 +1,7 @@
 Create .env inside this docker directory with below variables
 
 ```txt
-AUDIO_DATA_DIR=/home/monsoon/continuous_monitoring_data/live_data ### This is where the audio files are coming
+AUDIO_DATA_DIR=/home/monsoon/continuous_monitoring_data/live_data # This is where the audio files are coming (@ iNet)
 APP_DATA_DIR=${PWD}/app-data/soundscape-model
 AUDIO_CLASSIFIER_WEIGHTS=${PWD}/weights/soundscape-model.pt
 
