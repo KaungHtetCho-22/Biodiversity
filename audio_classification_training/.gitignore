@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+train_audio/data/sounds/*
+train_audio/data/dataframes/*
+train_audio/data/external/*
+train_audio/pretrained/*
+train_audio/out_weights/*
+train_audio/logs/*
+
+infer/data/*
+infer/weights/*
+ifner/output/*
+infer/exports/*
+
+!*/.gitkeep
+!*/*/.gitkeep
+!*/*/*/.gitkeep
+!*/*/*/*/.gitkeep
+
