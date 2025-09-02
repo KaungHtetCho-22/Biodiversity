@@ -33,7 +33,6 @@ This module focuses on training the bio-scoring system based on species counts.
 
 This is the core pipeline that connects all processes together.  
 
-The workflow can be summarized in three steps:  
 
 <!-- 2. **Inference** – Receive audio files from the iot-devices, run inference using the sound classification model, and store the results (predicted species) in an SQLite database.  
 3. **Scoring** – Fetch the predictions from the database and apply the score prediction model to calculate the daily biodiversity score based on species counts.   -->

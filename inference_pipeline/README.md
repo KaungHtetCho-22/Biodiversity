@@ -4,7 +4,7 @@ This automates the process of monitoring bird sounds from IOT devices, classifyi
 
 ---
 
-![workflow](diagram.png)
+![workflow](overview.png)
 
 #### Data Source (Raspberry Pi)
 - **Device:** IOT devices (Raspberry Pi + Audiomoth sensors) for audio data collection.
@@ -21,7 +21,7 @@ This automates the process of monitoring bird sounds from IOT devices, classifyi
 #### Bird Classification Model
 - The audio clips are processed by a **Bird Classification Model**.
 - This model performs inference/classification to identify bird species. 
-- The classification results are stored in a **MySQL database**.
+- The classification results are stored in a **SQLlite database**.
 
 ---
 
@@ -42,31 +42,34 @@ This automates the process of monitoring bird sounds from IOT devices, classifyi
 | Raspberry Pi + Audiomoth + 4G router        | Collects audio data                          |
 | FTPS                     | Secure transfer protocol                     |
 | iNet Server              | Inferencing machine               |
-| Bird Classification Model| Identifies bird sounds from audio            |
-| MySQL                    | Stores classification results               |
+| Audio Classification Model| Identifies bird and insect sounds from audio            |
+| SQLlite                    | Stores classification results               |
 | Score Prediction Model   | Predicts score based on classification       |
 | API                      | Receives JSON payloads from score model      |
 
 
 ---
 
-### Example usage 
-
-- Build and Run 
-```bash
-sh scripts/build_prod_image.sh
-docker compose -f docker/docker_compose_prod.yaml up -d
-```
-
 | File structure overview            |                            |
 |--------------------------|----------------------------------------------|
 | app-data/              | Stores the SQLite database used for predictions and classifications                               |
 | audio-data/      | Path to input .wav audio files ( continuous-monitoring-data)            |
-| src/soundscape.py  |   Monitors audio directories, runs bird sound classification, saves results to database         |
+| src/audio_monitoring.py  |   Monitors audio directories, runs bird sound classification, saves results to database         |
 | src/process_detections.py |   Retrieves classifications, runs score prediction, and generates JSON output |
 | logs/ |   `audio_inference.log` – logs classification & monitoring <br> `daily_report.log` logs API submission results  |
 | json-output/ |   Stores JSON files ready for API submission |
 | weights/ |   `soundscape-model` - bird classifier <br> `xgboost-model` - score predictor |
+
+--- 
+
+### Example usage 
+
+- Build and Run 
+```bash
+cd inference_pipeline
+sh scripts/build_prod_image.sh
+docker compose -f docker/docker_compose_prod.yaml up -d
+```
 
 - To follow real-time logs from the production container:
 ```bash
