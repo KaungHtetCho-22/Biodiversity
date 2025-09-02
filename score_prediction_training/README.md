@@ -91,5 +91,6 @@ If the first two criteria are not met, the area is assigned Class C.
 **Final Score Prediction**
 
 Based on the above criteria, the final biodiversity level prediction score is Class B.
+You can see the example results on [`Forestia_results`](./Forestia_results/) folder
 
 ---
