@@ -26,7 +26,9 @@ The Python libraries can be installed using pip. eg. `pip install numpy`
 - The audio classification predictions serve as the training data for predicting biodiversity scores. They are found in the `./data/csv`.
 - A pivot table is used to convert the audio classification predictions into the frequency of appearance for each species. This can be done by simply running the following code in the command line at the current directory, and the output will be `pivot_table.csv`
 
-`python3` preprocess.py --csv_path ./data/csv
+```bash
+python3 preprocess.py --csv_path ./data/csv
+```
 
 ### Model Training
 
@@ -42,7 +44,9 @@ The Python libraries can be installed using pip. eg. `pip install numpy`
 
 - Trained model weights are saved in `./results/weights` in best_xgboost_model_{`num_feature`}_{`acc`}_f1_{`f1score`}.pkl format
 
-`python3` training.py
+```bash
+python3 training.py
+```
 
 The image below shows an example of the training output, which includes a list of the selected features and the corresponding classification report for the validation set.
 
@@ -63,7 +67,9 @@ The unseen(test) data is preprocessed and converted into pivot table using the f
 - If there is a `KeyError` shows up, new columns with value 0 have to be added. Example, `df['Acheta-domesticus'] = 0`
 - The prediction result for each example is appended into the dataframe and saved in `bioscore_predictions.csv`.
 
-`python3 predict.py`
+```bash
+python3 predict.py
+```
 
 <img src="final_score.png" alt="bio_score_training" width="300">
 
