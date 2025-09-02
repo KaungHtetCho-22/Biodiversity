@@ -13,13 +13,14 @@ To build the container and start running the container
 - ```sh docker/build_docker.sh```
 - ```sh docker/run_docker.sh```
 
+After setting up the docker environments, follow the detailed instructions in the [`train`](./train/) folder.
+
 ## Dataset
 
 To train models with the provided code:
 - **Download Bird Data**: [Access the dataset here](https://qnap-2.aicenter.dynu.com/share.cgi?ssid=1fb4aa1ecbbc4ea8ac8a2c447e80453b).
 
 
-## Training
 
-- **Training**: Follow the detailed instructions in the [`train`](./train/) folder.
+
 

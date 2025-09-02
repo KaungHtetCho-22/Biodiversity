@@ -12,7 +12,11 @@ Ensure you have all necessary data by downloading from the sources below and sto
 - **Pretrained Models**: Download models, e.g., eca_nfnet_l0 from [Kaggle](https://www.kaggle.com/datasets/atsunorifujita/birdclef2023-4th-models), and save them in the `pretrained` folder as specified in your config file.
 
 ### Step 3: Prepare Data
-Run `create_custom_pkl_df.py` with correct paths to generate a DataFrame pickle file which organizes your dataset in a manner expected by the training script. Update the dataframe path in your config file accordingly. It is expected that you have the audio directories for each species inside the `sound_path` folder. This will generate the ``
+Run 
+```bash 
+python3 create_custom_pkl_df.py
+```
+with correct paths to generate a DataFrame pickle file which organizes your dataset in a manner expected by the training script. Update the dataframe path in your config file accordingly. It is expected that you have the audio directories for each species inside the `sound_path` folder. This will generate the `ait_train_meta.pickle` file.
 
 ## Expected Directory Structure for Given Example Config
 
