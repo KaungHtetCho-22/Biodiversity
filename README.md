@@ -6,6 +6,10 @@ The project is divided into three main components, each with its own documentati
 
 ---
 
+## 0. Custom pi-setup 
+
+This module covers how the raspberry pi is setup for recording and transferring the audio files to iNET via FTPS. Flashed image is uploaded to this google drive link as well **[Download Raspberry Pi OS Image](https://drive.google.com/drive/folders/19RC69tCjV7lfupJODWT0BL_QIx_DtFqr)**
+
 ## 1. Audio Classification Training  
 
 This module covers the training of bird and insect sound classification model.  
@@ -31,8 +35,15 @@ This is the core pipeline that connects all processes together.
 
 The workflow can be summarized in three steps:  
 
-1. **Model Training** – Train the sound classification and score prediction models.  
-2. **Inference & Storage** – Receive audio files from the iot-devices, run inference using the sound classification model, and store the results (predicted species) in an SQLite database.  
-3. **Scoring** – Fetch the predictions from the database and apply the score prediction model to calculate the daily biodiversity score based on species counts.  
+<!-- 2. **Inference** – Receive audio files from the iot-devices, run inference using the sound classification model, and store the results (predicted species) in an SQLite database.  
+3. **Scoring** – Fetch the predictions from the database and apply the score prediction model to calculate the daily biodiversity score based on species counts.   -->
+
+- See the `README.md` file in this directory for:  
+  - Environment setup  
+  - Workflow logic
 
 ---
+
+
+documenation links 
+
