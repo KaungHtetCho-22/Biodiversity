@@ -27,7 +27,7 @@ The Python libraries can be installed using pip. eg. `pip install numpy`
 - A pivot table is used to convert the audio classification predictions into the frequency of appearance for each species. This can be done by simply running the following code in the command line at the current directory, and the output will be `pivot_table.csv`
 
 ```bash
-python3 preprocess.py --csv_path ./data/csv
+python3 scripts/preprocess.py --csv_path ./csv
 ```
 
 ### Model Training
@@ -45,7 +45,7 @@ python3 preprocess.py --csv_path ./data/csv
 - Trained model weights are saved in `./results/weights` in best_xgboost_model_{`num_feature`}_{`acc`}_f1_{`f1score`}.pkl format
 
 ```bash
-python3 training.py
+python3 scripts/training.py
 ```
 
 The image below shows an example of the training output, which includes a list of the selected features and the corresponding classification report for the validation set.
@@ -54,7 +54,9 @@ The image below shows an example of the training output, which includes a list o
 
 ### Inference and Prediction
 
-`python3 preprocess_unseen_data.py`
+```bash
+python3 scripts/preprocess_unseen_data.py
+```
 
 ##### Preprocess Unseen Data
 The unseen(test) data is preprocessed and converted into pivot table using the following command. You can modify the filepath inside the code. The pivot table is saved in `forestia_processed_df.csv` file
@@ -68,7 +70,7 @@ The unseen(test) data is preprocessed and converted into pivot table using the f
 - The prediction result for each example is appended into the dataframe and saved in `bioscore_predictions.csv`.
 
 ```bash
-python3 predict.py
+python3 scripts/predict.py
 ```
 
 <img src="final_score.png" alt="bio_score_training" width="300">
