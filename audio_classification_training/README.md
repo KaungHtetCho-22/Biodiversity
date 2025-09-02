@@ -17,8 +17,7 @@ After setting up the docker environments, follow the detailed instructions in th
 
 ## Dataset
 
-To train models with the provided code:
-- **Download Bird Data**: [Access the dataset here](https://qnap-2.aicenter.dynu.com/share.cgi?ssid=1fb4aa1ecbbc4ea8ac8a2c447e80453b).
+To train models with the provided code: We will upload the sound files that is used at here later cause the file size is too big.
 
 
 
