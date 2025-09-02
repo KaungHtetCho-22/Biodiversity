@@ -4,3 +4,4 @@ score_prediction_training/csv/score-training-data-score-3-including-nocall-split
 score_prediction_training/csv/score-training-data-score-5-including-nocall-split.csv filter=lfs diff=lfs merge=lfs -text
 score_prediction_training/csv/score-training-data-score-A-first-backup-data-including-nocall-split.csv filter=lfs diff=lfs merge=lfs -text
 score_prediction_training/csv/score-training-data-score-B-first-backup-data-including-nocall-split.csv filter=lfs diff=lfs merge=lfs -text
+score_prediction_training/results/weights/* filter=lfs diff=lfs merge=lfs -text
