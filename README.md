@@ -12,7 +12,6 @@ This module covers the training of bird and insect sound classification model.
 - See the `README.md` file in this directory for:  
   - Docker setup  
   - Training instructions  
-  - Inference usage  
 
 ---
 
