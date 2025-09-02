@@ -2,12 +2,13 @@
 
 This module offers a step-by-step guide for training a model to predict biodiversity score levels, using a pivot table generated from audio classification results.  
 
+---
 ## Workflow
 - [Setup](#Setup): Installing necessary Python libraries.
 - [Data Preprocessing](#Data-Preprocessing): Clean, transform, and prepare the dataset for model training.
 - [Model Training](#Model-Training): Build and train the prediction model on the processed data.
 - [Inference and Prediction](#Inference-and-Prediction): Use the trained model to make predictions on new data.
-
+---
 ## Setup
 
 ### Requirement
@@ -75,4 +76,20 @@ python3 scripts/predict.py
 
 <img src="final_score.png" alt="bio_score_training" width="300">
 
+---
 
+**Scoring Threshold Based on the Forestia results**
+
+The output of the biodiversity score prediction for each row is aggregated by the count of each class prediction and then converted into a percentage contribution. Due to data imbalance in the training distribution, Class C is the majority prediction in almost all cases. To address this issue, we set the following sequential criteria:
+
+If the majority vote contribution for Class B is >13%, the area is assigned Class B.
+
+If the first criterion is not met and the majority vote contribution for Class A is >6%, the area is assigned Class A.
+
+If the first two criteria are not met, the area is assigned Class C.
+
+**Final Score Prediction**
+
+Based on the above criteria, the final biodiversity level prediction score is Class B.
+
+---
