@@ -43,6 +43,4 @@ This is the core pipeline that connects all processes together.
 
 ---
 
-
-documenation links 
-
+**[Documenation](https://KaungHtetCho-22.github.io/mkdocs-bio/)**
